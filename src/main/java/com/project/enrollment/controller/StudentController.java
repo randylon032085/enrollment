@@ -17,43 +17,40 @@ import com.project.enrollment.model.StudentModel;
 import com.project.enrollment.service.StudentService;
 
 @RestController
-@RequestMapping(path="/v3/student")
+@RequestMapping(path = "/v3/student")
 public class StudentController {
 
     @Autowired
     private StudentService studentServ;
 
     @PostMapping
-    public void createStudent(@RequestBody StudentModel newStudent){
-         studentServ.createStudent(newStudent);
+    public void createStudent(@RequestBody StudentModel newStudent) {
+        studentServ.createStudent(newStudent);
     }
 
     @GetMapping
-    public List<StudentModel> getAllStudent(){
+    public List<StudentModel> getAllStudent() {
         return studentServ.getAllStudent();
     }
-    
+
     @DeleteMapping("/{id}")
-    public void deleteStudentById(@PathVariable int id){
+    public void deleteStudentById(@PathVariable int id) {
         studentServ.deleteStudentById(id);
     }
 
     @DeleteMapping
-    public void detelAllStudent(){
+    public void detelAllStudent() {
         studentServ.deleteAllStudent();
     }
 
     @PutMapping("/{id}")
-    public void updateStudentById(@PathVariable int id, @RequestBody StudentModel updatedStudent){
+    public void updateStudentById(@PathVariable int id, @RequestBody StudentModel updatedStudent) {
         studentServ.updateStudentById(id, updatedStudent);
     }
 
     @GetMapping("/search")
-    public List<StudentModel> searchStudent(@RequestParam String name){
+    public List<StudentModel> searchStudent(@RequestParam String name) {
         return studentServ.searchStudent(name);
     }
 
-
-  
-    
 }
