@@ -31,3 +31,35 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Maven build
+/target/
+
+# IDE settings
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/logs/
+/*.log
+
+# Docker local database files
+docker-mysql-data/
+
+# Node / Frontend builds (if ever used)
+node_modules/
+dist/
+build/
+
+# Environment / secrets
+.env
+application-local.properties

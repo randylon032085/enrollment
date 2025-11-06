@@ -10,10 +10,8 @@ import lombok.Data;
 @Data
 public class StudentModel {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String firstname, lastname;
 
-
-    
 }
